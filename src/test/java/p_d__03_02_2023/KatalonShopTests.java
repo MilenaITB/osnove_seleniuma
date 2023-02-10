@@ -68,7 +68,8 @@ public class KatalonShopTests {
     public void addingProductsWithQuantityToTheCart() throws InterruptedException {
 
         driver.findElement(By.xpath("//*[@class='quantity']/input")).clear();
-        driver.findElement(By.xpath("//*[@class='quantity']/input")).sendKeys("3");
+        driver.findElement(By.xpath("//*[@class='quantity']/input"))
+                .sendKeys("3");
         driver.findElement(By.name("add-to-cart")).click();
 
         WebElement message = driver.findElement(By.className("woocommerce-message"));
